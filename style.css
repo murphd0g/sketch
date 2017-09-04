@@ -1,0 +1,47 @@
+body {
+  background-color: #778899;
+}
+
+#buttons {
+  text-align: center;
+}
+
+.clear {
+  height: 38px;
+  width: 76px;
+}
+.black {
+  height: 38px;
+  width: 76px;
+}
+
+.random {
+  height: 38px;
+  width: 76px;
+}
+
+.eraser {
+  height: 38px;
+  width: 76px;
+}
+
+#container {
+	position: relative;
+	top: 30px;
+	outline: 2px solid #000;
+	font-size: 0;
+	margin: auto;
+  height: 600px;
+  width: 600px;
+	padding: 0;
+	border: 200px;
+  border-color: red;
+}
+
+.grid {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  background-color: white;
+}

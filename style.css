@@ -6,36 +6,65 @@ body {
   text-align: center;
 }
 
-.clear {
+.reset {
   height: 38px;
-  width: 76px;
+  width: 115px;
+  background-color: ghostwhite;
+  color: #778899;
+  font-size: 20px;  
 }
+
 .black {
   height: 38px;
-  width: 76px;
+  width: 115px;
+  background-color: ghostwhite;
+  color: #778899;
+  font-size: 20px;  
 }
 
 .random {
   height: 38px;
-  width: 76px;
+  width: 115px;
+  background-color: ghostwhite;
+  color: #778899;
+  font-size: 20px;
 }
 
 .eraser {
   height: 38px;
-  width: 76px;
+  width: 115px;
+  background-color: ghostwhite;
+  color: #778899;
+  font-size: 20px;  
+}
+
+.resize {
+  height: 38px;
+  width: 115px;
+  background-color: ghostwhite; 
+  color: #778899; 
+  font-size: 20px;  
+}
+
+#currentRes {
+  top: 10px;  
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  background-color: ghostwhite;  
+
+  color: #778899;
 }
 
 #container {
 	position: relative;
-	top: 30px;
-	outline: 2px solid #000;
+	top: 20px;
 	font-size: 0;
 	margin: auto;
   height: 600px;
   width: 600px;
 	padding: 0;
 	border: 200px;
-  border-color: red;
 }
 
 .grid {
@@ -43,5 +72,5 @@ body {
   margin: 0;
   padding: 0;
   display: inline-block;
-  background-color: white;
+  background-color: ghostwhite;
 }

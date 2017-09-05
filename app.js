@@ -1,5 +1,32 @@
 $(document).ready(function() {
-  createGrid(60); //create starter grid
+  createGrid(20); //create starter grid
+  var rainbow = false;
+
+  $('.reset').on('click', function() {
+    $('#container').children().remove();
+    createGrid(20);
+  });
+
+  $('.black').on('click', function() {
+    rainbow = false;
+    colorGrid('black');
+  });
+
+  $('.random').on('click', function() {
+    rainbow = true;
+    colorGrid();
+  });
+
+  $('.eraser').on('click', function() {
+    rainbow = false;
+    colorGrid('ghostwhite');
+  });
+
+  $('.resize').on('click', function() {
+    var newRez = prompt('Enter new grid size (under 100 plz)');
+    $('#container').children().remove();
+    createGrid(newRez);
+  });
 
   function createGrid(size) {
     for (var x = 0; x < size; x++) {
@@ -9,29 +36,22 @@ $(document).ready(function() {
     };
     $('.grid').height(600 / size);
     $('.grid').width(600 / size);
+    $('#currentRes').text('The current resolution is ' + size + 'x' + size);
   };
 
   function colorGrid(color) {
     $('.grid').on('mouseenter', function() {
-      $(this).css('background-color', color);
+      if (rainbow) {
+        $(this).css('background-color', randomColor());
+      } else {
+        $(this).css('background-color', color);
+      }
     });
   };
 
-  $('.eraser').on('click', function() {
-    colorGrid('white');
-  })
-
-  $('.black').on('click', function() {
-    colorGrid('black');
-  })
-
-  $('.clear').on('click', function() {
-    $('#container').css('background-color', 'white');
-  })
-
-  $('.random').on('click', function() {
+  function randomColor() {
     var random = 'rgb(' + (Math.floor(Math.random() * 256)) + ', ' + (Math.floor(Math.random() * 256)) + ', ' + (Math.floor(Math.random() * 256)) + ')';
-    colorGrid(random);
-  })
+    return random;
+  };
 
 })
